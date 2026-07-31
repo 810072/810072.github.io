@@ -1,0 +1,52 @@
+/* TechStack - Keyword Pills Layout */
+.techstack {
+  min-height: auto;
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  cursor: default;
+}
+
+.tech-pill:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  transform: translateY(-2px);
+  color: var(--neon-cyan);
+}
+
+.tech-pill-icon {
+  font-size: 1.2rem;
+  color: var(--neon-cyan);
+  flex-shrink: 0;
+}
+
+.tech-pill-name {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .tech-pills {
+    gap: 8px;
+  }
+  .tech-pill {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "timeline": "Timeline",
+    "awards": "Awards",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I am",
+    "name": "Choi Sangjean",
+    "nameFirst": "Choi Sangjean",
+    "subtitle": "Hardware-Aware Software Engineer",
+    "description": "Software built on hands that learned mechanics, electronics, and control. A developer who understands hardware, an engineer who bridges the field and the code.",
+    "cta": "View Projects",
+    "scroll": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a junior developer with a deep understanding of hardware characteristics.",
+    "description2": "I built my foundation in industrial mechanics, electronics, and control systems at Seoul Robot High School. Later, I majored in Software Computing at university to master IT systems and AI capabilities.",
+    "description3": "This 'convergence' background is my unique strength. It allows me to design software while considering hardware constraints and potential. I aspire to be an engineer who solves real-world problems through technology.",
+    "educationTitle": "Education",
+    "school1": "Seoul Robot Meister High School",
+    "school2": "Hankyong National University",
+    "education1": "Seoul Robot Meister High School, Dept. of Robot Control (2015.03 ~ 2017.02)",
+    "education2": "Hankyong National University, Dept. of Software Service Computing (2022.03 ~ 2026.02 *Expected)",
+    "education": "Education",
+    "educationValue": "Hankyong Nat'l Univ. Software Service Computing (Expected)",
+    "major": "Major",
+    "majorValue": "Software Service Computing",
+    "interest": "Interests",
+    "interestValue": "AI/ML, Physical Computing",
+    "location": "Location",
+    "locationValue": "South Korea"
+  },
+  "skills": {
+    "title": "Skills",
+    "all": "All",
+    "categories": {
+      "languages": "Languages",
+      "aiml": "AI / ML",
+      "tools": "Tools"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "viewGithub": "View on GitHub",
+    "viewMore": "View More",
+    "role": "Role",
+    "techStack": "Tech Stack",
+    "filter": {
+      "all": "All",
+      "team": "Team",
+      "personal": "Personal"
+    },
+    "keyFeatures": "Key Features & Technical Highlights",
+    "sectionBackground": "Background & Motivation",
+    "sectionApproach": "Role & Approach",
+    "sectionResults": "Results & Learnings",
+    "project1": {
+      "title": "Memordo — Interactive AI Note App Utilizing Personal Memos",
+      "description": "A project combining a personal note app with LLM. Creates a knowledge Graph by calculating similarity between embedded documents and implements personalized chatbot via RAG.",
+      "role": "LLM Backend, RAG, Graph Generation implementation",
+      "achievement": "🏆 Excellence Award at University Capstone Design Competition (2025)",
+      "features": [
+        "Knowledge Graph & RAG: Built a Re-Ranking RAG pipeline that calculates vector-based similarity between notes using Gemini API and Chroma DB to construct a knowledge graph.",
+        "90% Token Cost Reduction: Transitioned from initial brute-force document evaluation to an embedding-based pre-filtering + dual LLM (Gemini 2.5-Flash / Flash-Lite) architecture, reducing token consumption to approximately 10% of the initial level."
+      ],
+      "background": "It was a time when LLM chatbot services such as ChatGPT were emerging. However, they could only provide general answers and no service yet existed that offered personalized responses based on a user's own data. Noticing this gap, we planned an interactive memo management app as a 3-person team combining LLM's contextual understanding with personal note data (approximately 10 months).",
+      "approach": "I was responsible for the document management system and the LLM backend. I computed embedding vectors for memo documents to build a similarity map between documents and developed a feature to visualize these relationships as a graph. I also designed and built a Q&A pipeline that searches relevant documents and generates answers when a user asks a question. Initially, lacking a deep understanding of RAG, we used a method where the LLM would evaluate every document one by one for each query, wasting tokens proportional to the total number of documents in the worst case. We then progressively introduced embedding-based pre-filtering and Re-Ranking pipelines to refine the system.",
+      "results": "Through embedding-based filtering and RAG pipeline refinement, reduced token costs by approximately 90% compared to the initial implementation while significantly improving answer accuracy. Won the Excellence Award at the university Capstone Design Competition, gaining practical experience in LLM pipeline design and vector DB utilization."
+    },
+    "project2": {
+      "title": "Automatic Crawler for Department Bulletin Board",
+      "description": "A program that crawls and displays information on the department hallway bulletin board. Periodically fetches data from the department site and displays it for students.",
+      "role": "Crawling logic development and data pipeline construction",
+      "features": [
+        "Unattended Automation Pipeline: Built a background scraping pipeline using Selenium to handle login and dynamically rendered announcements on the department website.",
+        "Display Optimization: Serialized unstructured HTML data into structured JSON format to provide reliable real-time rendering for the department hallway display."
+      ],
+      "background": "There was a monitor installed in the department hallway, but it was sitting unused because there was no content to display. At a professor's request, I formed a 4-person team to utilize this idle resource. Instead of the inefficient method of manually entering announcements, I envisioned a system that automatically collects university and department notices, categorizing by grade and department, and displays it on the bulletin board.",
+      "approach": "Built an automated pipeline that periodically crawls school and department announcement pages using Selenium. The core challenge was not the crawling itself, but automatically classifying which grade level should see each announcement and whether it was relevant to computer science students. Since LLM was not readily available at the time, we designed a keyword-based filtering system with team members to implement grade-level and department-specific information classification. Classified data was stored in JSON format and designed to be displayed as an auto-refreshing web app on the hallway monitor.",
+      "results": "The completed system was actually deployed on the department hallway bulletin board, providing announcements to students. I gained experience building an unattended operational environment where the latest information is automatically updated without any manual input."
+    },
+    "project3": {
+      "title": "Wildfire Numerical Calculator Using Machine Learning",
+      "description": "A web app that shows wildfire predictions based on weather conditions using a 4-layer MLP model trained on Gyeonggi-do's wildfire dataset.",
+      "role": "Personal Project - Model design, training, web app development",
+      "features": [
+        "Data Preprocessing & Neural Network Design: Cleaned public meteorological datasets and designed/trained a 4-layer MLP (Multi-Layer Perceptron) neural network using TensorFlow and Keras.",
+        "Full-Stack Web Integration: Served the trained model via a Flask REST API pipeline to predict and visualize wildfire risk in real-time based on user weather inputs."
+      ],
+      "background": "This was a personal project driven by curiosity about the correlation between meteorological data and wildfire occurrence, exploring whether machine learning could predict it. Using actual wildfire occurrence data and public meteorological data from Gyeonggi-do, the goal was to build a web service that predicts wildfire risk under specific weather conditions.",
+      "approach": "After preprocessing meteorological data (temperature, humidity, wind speed, etc.) collected from a public data portal, I designed and trained a 4-layer MLP neural network using TensorFlow/Keras. The trained model was served via a Flask-based REST API, completing a web app that predicts and visualizes wildfire risk in real-time when users input weather conditions.",
+      "results": "I independently experienced the entire pipeline of a machine learning project—from data collection to model design, training, and web service deployment. In particular, I developed practical data engineering skills through public data preprocessing, handling missing values, and model hyperparameter tuning."
+    },
+    "project4": {
+      "title": "Flower Image Search Site Using YOLOv8",
+      "description": "A web search service that detects flower types in real-time from uploaded images using YOLOv8 custom trained on Oxford Flowers Dataset.",
+      "role": "Personal Project - Model training, web service development",
+      "features": [
+        "Custom Vision Data Curation: Preprocessed and annotated bounding boxes for the Oxford Flowers Dataset via RoboFlow to construct a custom training dataset.",
+        "Real-Time Object Detection Pipeline: Transfer-trained the latest YOLOv8 architecture to detect and infer flower types and locations in user-uploaded images in real-time."
+      ],
+      "background": "This was a personal project started for the purpose of learning computer vision and object detection technologies. Going beyond simple image classification, I wanted to create a practical service that detects flower types and locations in real-time from user-taken photos and searches for related information.",
+      "approach": "I preprocessed the Oxford Flowers Dataset with RoboFlow and performed bounding box annotations to build a custom training dataset. Based on this, I transfer-trained a YOLOv8 model to create a flower type detection model, and integrated it with the Naver Search API to implement a web service that can look up detailed information about detected flowers.",
+      "results": "I gained practical knowledge of the transfer learning process for YOLO-family models and methods for building custom datasets. Additionally, I accumulated experience in constructing an end-to-end pipeline that integrates a trained model with a web service to deliver inference results in real-time."
+    },
+    "project5": {
+      "title": "Department Deep Learning GPU Server Setup",
+      "description": "An infrastructure project building an NVIDIA A100 dual GPU server to provide students with a remote deep learning training environment.",
+      "role": "Department Intern - Solo server setup and operations",
+      "background": "The department needed GPU computing resources for deep learning courses and research, but had no GPU server available for student use. At the professor's request, I took on the solo task of building an NVIDIA A100 2-Way GPU server as a department intern.",
+      "approach": "Having never built a server of this scale before, I had to learn everything from scratch—from OS installation to CUDA environment setup and network configuration. I installed NVIDIA drivers and CUDA toolkit on Ubuntu Server, and configured JupyterLab so students could access GPU resources through web browsers. Nginx was used as a reverse proxy to manage external access, and SSH access was also set up. Port forwarding and firewall issues were resolved through collaboration with department office staff and the university IT center.",
+      "features": [
+        "A100 Dual GPU Infrastructure: Installed Ubuntu Server, CUDA toolkit, and cuDNN on an NVIDIA A100 2-Way GPU server, configuring deep learning framework (TensorFlow, PyTorch) execution environments",
+        "Multi-User Remote Lab Environment: Built a self-service lab environment where multiple students can remotely access GPU resources simultaneously via JupyterLab + Nginx reverse proxy + SSH",
+        "User and Admin Manual Creation: Wrote and distributed separate administration manuals and student user guides to ensure sustainable operation and smooth handovers of the infrastructure."
+      ],
+      "results": "The built server remains actively used for department deep learning courses and research to this day, and as shown in the photo, it is proudly featured on the official department website as a 'State-of-the-Art Development Environment'. Successfully completing the entire process from infrastructure design to deployment and network integration proved practical system engineering capabilities."
+    }
+  },
+  "timeline": {
+    "title": "Timeline",
+    "event1": {
+      "title": "Enrolled in Seoul Robot Meister High School",
+      "description": "Dept. of Robot Control, began learning mechanics, electronics, and hardware control"
+    },
+    "event2": {
+      "title": "Graduated from Seoul Robot Meister High School",
+      "description": "Dept. of Robot Control, established industrial foundation in mechanics, electronics, and hardware control"
+    },
+    "event3": {
+      "title": "Military Enlistment",
+      "description": "Enlisted in Jeju Coast Guard"
+    },
+    "event4": {
+      "title": "Military Discharge",
+      "description": "Honorably discharged from Jeju Coast Guard"
+    },
+    "event5": {
+      "title": "Entered Hankyong National University",
+      "description": "Enrolled in Dept. of Software Service Computing"
+    },
+    "event6": {
+      "title": "Expected Graduation from Hankyong National University",
+      "description": "Expected to graduate from Dept. of Software Service Computing"
+    }
+  },
+  "awards": {
+    "title": "Awards & Certifications",
+    "award1": {
+      "title": "Capstone Design Competition — Excellence Award",
+      "organization": "Hankyong National University",
+      "date": "2025",
+      "description": "Memordo Project — Won Excellence Award for an interactive AI memo app combining LLM and RAG."
+    },
+    "award2": {
+      "title": "Craftsman Information Processing",
+      "organization": "Human Resources Development Service of Korea",
+      "date": "Certified",
+      "description": "National technical certification for analysis, design, implementation and operation of information systems."
+    },
+    "award3": {
+      "title": "Craftsman Electrician",
+      "organization": "Human Resources Development Service of Korea",
+      "date": "Certified",
+      "description": "National technical certification for construction, maintenance and repair of electrical installations."
+    }
+  },
+  "footer": {
+    "name": "Choi Sangjean",
+    "rights": "All rights reserved.",
+    "built": "Built with React & CSS",
+    "copyright": "© 2026 Choi Sangjean"
+  }
+}

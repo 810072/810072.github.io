@@ -1,0 +1,137 @@
+/* Hero 컴포넌트 스타일 */
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-content {
+  z-index: var(--z-normal);
+  padding: var(--spacing-lg);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-greeting {
+  font-family: var(--font-mono);
+  color: var(--neon-magenta);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+.hero-name {
+  font-size: 4.5rem;
+  font-family: var(--font-heading);
+  color: #fff;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.hero-name-first {
+  display: inline-block;
+}
+
+/* 타이핑 역할 애니메이션 */
+.hero-role-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 1.6rem;
+  font-family: var(--font-mono);
+  min-height: 2.4rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-role-prefix {
+  color: var(--neon-cyan);
+  font-weight: 700;
+}
+
+.hero-role {
+  color: var(--text-secondary);
+}
+
+.hero-cursor {
+  color: var(--neon-cyan);
+  animation: typing-cursor 0.75s step-end infinite;
+  font-weight: 300;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-lg);
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 스크롤 표시기 */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  opacity: 0.7;
+  transition: all var(--transition-fast);
+  z-index: var(--z-normal);
+  cursor: pointer;
+}
+
+.hero-scroll-indicator:hover {
+  opacity: 1;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.scroll-text {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.scroll-arrow {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 3rem;
+  }
+  .hero-role-wrapper {
+    font-size: 1.2rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+}
