@@ -172,8 +172,6 @@
   },
   "footer": {
     "name": "Choi Sangjean",
-    "rights": "All rights reserved.",
-    "built": "Built with React & CSS",
     "copyright": "© 2026 Choi Sangjean"
   }
 }

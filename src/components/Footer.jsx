@@ -10,10 +10,7 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <p className="footer-copyright">
-            © {year} {t('footer.name', '최상진')}. {t('footer.rights', 'All rights reserved.')}
-          </p>
-          <p className="footer-built">
-            {t('footer.built', 'Built with React + Vite')}
+            © {year} {t('footer.name', '최상진')}
           </p>
         </div>
         <div className="footer-links">
